@@ -12,6 +12,7 @@ public class sendEmail
     {
         final String to = Main.YourEmailToGetNotified;
         final String from = "shishir47singh@zohomail.com";
+        String pwd;
 
         String host = "smtp.zoho.com";
         Properties properties = System.getProperties();
@@ -23,7 +24,7 @@ public class sendEmail
 
         Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("shishir47singh@zohomail.com", "kFCz@cwdE77t@jN");
+                return new PasswordAuthentication("shishir47singh@zohomail.com", pwd);
             }
         });
 
